@@ -1,5 +1,6 @@
 import 'package:template/di/firebase_di_module.dart';
 import 'package:template/di/di_module.dart';
+import 'package:template/di/page_1_di_module.dart';
 import 'package:template/di/router_di_module.dart';
 
 final resolveInstance = GetIt.instance;
@@ -32,6 +33,7 @@ sealed class Bootstrap {
   static Future<void> initialize() async {
     // Initialize all the modules here
     List<DiModule> modules = [
+      Page1DiModule(),
       // This should be the last module to be initialized
       RouterDiModule(),
     ];

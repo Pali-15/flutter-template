@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:template/common_widgets/bottom_navbar.dart';
+import 'package:template/screens/page_1/bloc/bloc.dart';
 import 'package:template/screens/page_1/page_1.dart';
 import 'package:template/screens/page_1/page_1_nested.dart';
 import 'package:template/screens/page_2/page_2.dart';
@@ -62,12 +64,19 @@ class AppRouter {
 
 class RoutesBuilder {
   //Declare dependencies here (example: bloc)
+  late final Page1Bloc page1bloc;
 
-  RoutesBuilder();
+  RoutesBuilder({required this.page1bloc});
   //Builder functions here
   Widget page1Builder(BuildContext context, GoRouterState state) {
     // If needed read params from routing here, and wrap the child with BlocProviders
-    return RouteWrapper(child: Page1());
+    return RouteWrapper(
+      onInit: () => page1bloc.add(Page1BlocEvent.load()),
+      child: BlocProvider.value(
+        value: page1bloc,
+        child: Page1(),
+      ),
+    );
   }
 
   Widget page2Builder(BuildContext context, GoRouterState state) {
