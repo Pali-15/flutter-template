@@ -29,7 +29,7 @@ sealed class Bootstrap {
   }
 
   // Dependencies needed after the app is running
-  // Example: Buisness logic relate blocs/cubits, router
+  // Example: Buisness logic related blocs/cubits, router
   static Future<void> initialize() async {
     // Initialize all the modules here
     List<DiModule> modules = [
