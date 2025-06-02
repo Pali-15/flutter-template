@@ -70,11 +70,7 @@ class RoutesBuilder {
   Widget page1Builder(BuildContext context, GoRouterState state) {
     // If needed read params from routing here, and wrap the child with BlocProviders
     return RouteWrapper(
-      onInit: () => page1bloc.add(Page1BlocEvent.load()),
-      child: BlocProvider.value(
-        value: page1bloc,
-        child: Page1(),
-      ),
+      child: Page1(),
     );
   }
 
@@ -83,6 +79,12 @@ class RoutesBuilder {
   }
 
   Widget page1NestedBuilder(BuildContext context, GoRouterState state) {
-    return RouteWrapper(child: Page1Nested());
+    return RouteWrapper(
+      onInit: () => page1bloc.add(Page1BlocEvent.load()),
+      child: BlocProvider.value(
+        value: page1bloc,
+        child: Page1Nested(),
+      ),
+    );
   }
 }

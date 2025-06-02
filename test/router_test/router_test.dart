@@ -18,13 +18,13 @@ void main() {
 
     setUp(() {
       page1bloc = MockPage1Bloc();
-      routesBuilder = buildTestRoutesBuilder(page1Bloc: page1bloc);
-    });
-    testWidgets('App will init at page 1', (tester) async {
       when(
         () => page1bloc.state,
       ).thenReturn(Page1BlocState.loaded(['1']));
 
+      routesBuilder = buildTestRoutesBuilder(page1Bloc: page1bloc);
+    });
+    testWidgets('App will init at page 1', (tester) async {
       await tester.pumpAppRoute(AppRouter(routesBuilder),
           route: AppRoutes.page1);
 
@@ -56,7 +56,7 @@ void main() {
       routesBuilder = buildTestRoutesBuilder();
     });
     testWidgets('App will init at page 2', (tester) async {
-      await tester.pumpAppRoute(AppRouter(routesBuilder, AppRoutes.page2),
+      await tester.pumpAppRoute(AppRouter(routesBuilder),
           route: AppRoutes.page2);
 
       expect(find.byType(Page2), findsOneWidget);
