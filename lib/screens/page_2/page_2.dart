@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:template/common_widgets/base_screen.dart';
+import 'package:template/design/spacing.dart';
 import 'package:template/design/theme.dart';
 import 'package:template/extensions/context_design_extension.dart';
 
@@ -24,7 +24,7 @@ class Page2 extends StatelessWidget {
                 onChanged: (_) => ThemeSwitcher.switchTheme(),
               ),
             ),
-            SizedBox(height: 5.h),
+            SizedBox(height: AppSpacing.xs.vertical),
             Text(
               'Switch to ${Theme.of(context).brightness == Brightness.dark ? "Light" : "Dark"} Theme',
               style: context.textStyles.subtitle,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:template/design/spacing.dart';
 import 'package:template/extensions/context_design_extension.dart';
 
 class BasePage extends StatelessWidget {
@@ -38,8 +38,10 @@ class BasePage extends StatelessWidget {
             ),
       body: SafeArea(
         child: Padding(
-          padding:
-              padding ?? EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+          padding: padding ??
+              EdgeInsets.symmetric(
+                  horizontal: AppSpacing.m.horizontal,
+                  vertical: AppSpacing.m.vertical),
           child: children,
         ),
       ),
