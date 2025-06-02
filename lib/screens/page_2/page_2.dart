@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:template/common_widgets/base_screen.dart';
-import 'package:template/theme.dart';
+import 'package:template/design/theme.dart';
+import 'package:template/extensions/context_extension.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
@@ -18,6 +19,7 @@ class Page2 extends StatelessWidget {
             ValueListenableBuilder(
               valueListenable: ThemeSwitcher.lightThemeNotifier,
               builder: (context, value, child) => Switch(
+                activeTrackColor: context.colors.switcherActive,
                 value: value,
                 onChanged: (_) => ThemeSwitcher.switchTheme(),
               ),
@@ -25,7 +27,7 @@ class Page2 extends StatelessWidget {
             SizedBox(height: 5.h),
             Text(
               'Switch to ${Theme.of(context).brightness == Brightness.dark ? "Light" : "Dark"} Theme',
-              style: Theme.of(context).textTheme.bodySmall,
+              style: context.textStyles.subtitle,
             ),
           ],
         ),

@@ -1,4 +1,4 @@
-import 'package:template/domain/di/di_module.dart';
+import 'package:template/di/di_module.dart';
 import 'package:template/router/router.dart';
 
 class RouterDiModule extends DiModule {

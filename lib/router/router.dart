@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:template/common_widgets/bottom_navbar.dart';
-import 'package:template/presentation/page_1/page_1.dart';
-import 'package:template/presentation/page_1/page_1_nested.dart';
-import 'package:template/presentation/page_2/page_2.dart';
+import 'package:template/screens/page_1/page_1.dart';
+import 'package:template/screens/page_1/page_1_nested.dart';
+import 'package:template/screens/page_2/page_2.dart';
 import 'package:template/router/route_wrapper.dart';
 import 'package:template/router/routes.dart';
 

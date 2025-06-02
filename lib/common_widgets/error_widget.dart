@@ -18,7 +18,7 @@ class AppErrorWidget extends StatelessWidget {
         ),
         Text(
           "Oops something went wrong, please try again!",
-          style: context.textTheme.bodyMedium!,
+          style: context.textStyles.subtitle,
         ),
         SizedBox(
           height: 30.h,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:template/common_widgets/base_screen.dart';
+import 'package:template/extensions/context_extension.dart';
 
 class Page1Nested extends StatelessWidget {
   const Page1Nested({super.key});
@@ -11,7 +12,7 @@ class Page1Nested extends StatelessWidget {
       children: Center(
         child: Text(
           "Page 1 Nested",
-          style: Theme.of(context).textTheme.bodyLarge,
+          style: context.textStyles.body,
         ),
       ),
     );

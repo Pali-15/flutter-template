@@ -1,10 +1,18 @@
+// import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:template/bootstrap.dart';
 import 'package:template/router/router.dart';
-import 'package:template/theme.dart';
+import 'package:template/design/theme.dart';
 
-void main() {
+Future<void> main() async {
+  // -------- FIREBASE RELATED  --------
+  // UNCOMMENT AFTER FIREBASE IS SET UP
+  // await Firebase.initializeApp();
+  // FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+  // createBaseDependencies();
+  // -------- END OF FIREBASE RELATED --------
   createDependencies();
   runApp(const MyApp());
 }

@@ -1,10 +1,15 @@
-import 'package:template/domain/di/di_module.dart';
-import 'package:template/domain/di/router_di_module.dart';
+import 'package:template/di/crashlytics_cubit_di_module.dart';
+import 'package:template/di/di_module.dart';
+import 'package:template/di/router_di_module.dart';
 
 final resolveInstance = GetIt.instance;
 
 void createDependencies() {
   Bootstrap.initialize();
+}
+
+void createBaseDependencies() {
+  Bootstrap.initalizeBaseDependecies();
 }
 
 //Dispose all of the dependencies
@@ -13,6 +18,17 @@ void disposeDependencies() {
 }
 
 sealed class Bootstrap {
+  // Dependencies needed at the start of the app
+  // Example: Auth, Firebase, ...
+  static Future<void> initalizeBaseDependecies() async {
+    List<DiModule> modules = [CrashlyticsCubitDiModule()];
+    for (final module in modules) {
+      await module.initialize();
+    }
+  }
+
+  // Dependencies needed after the app is running
+  // Example: Buisness logic relate blocs/cubits, router
   static Future<void> initialize() async {
     // Initialize all the modules here
     List<DiModule> modules = [

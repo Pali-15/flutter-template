@@ -19,7 +19,7 @@ class BasePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
+      backgroundColor: context.colors.background,
       appBar: (!enableBackButton && title == null)
           ? null
           : AppBar(
@@ -27,7 +27,7 @@ class BasePage extends StatelessWidget {
                   ? null
                   : Text(
                       title!,
-                      style: context.textTheme.titleMedium,
+                      style: context.textStyles.headline,
                     ),
               leading: enableBackButton
                   ? IconButton(

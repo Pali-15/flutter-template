@@ -38,7 +38,7 @@ class AppTextButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         label,
-        style: context.textTheme.bodySmall,
+        style: context.textStyles.subtitle,
       ),
     );
   }
@@ -64,7 +64,7 @@ class AppElevatedButton extends StatelessWidget {
     return AppElevatedButton._(
       label: label,
       onPressed: onPressed,
-      backgroundColor: context.colorScheme.inversePrimary,
+      backgroundColor: context.colors.buttonColor,
     );
   }
 
@@ -78,8 +78,8 @@ class AppElevatedButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         label,
-        style: context.textTheme.bodyMedium!
-            .copyWith(color: context.colorScheme.primary),
+        style: context.textStyles.subtitle
+            .copyWith(color: context.colors.invertedTextColor),
       ),
     );
   }
