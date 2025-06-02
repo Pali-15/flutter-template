@@ -5,6 +5,8 @@ import 'package:go_router/go_router.dart';
 import 'package:template/router/router.dart';
 
 extension PumpAppExtension on WidgetTester {
+  // Since all of the baseDependencies will live on top of the app, we should mock them here to give them a default behaviour in the test enviroment,
+  // give the possibility to overwrite that behaviour
   Future<void> pumpAppRoute(
     AppRouter router, {
     String? route,
