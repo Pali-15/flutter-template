@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:template/common_widgets/base_screen.dart';
-import 'package:template/extensions/context_extension.dart';
+import 'package:template/extensions/context_design_extension.dart';
 
 class Page1Nested extends StatelessWidget {
   const Page1Nested({super.key});

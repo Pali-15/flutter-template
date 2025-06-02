@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:template/common_widgets/buttons.dart';
-import 'package:template/extensions/context_extension.dart';
+import 'package:template/extensions/context_design_extension.dart';
 
 class AppErrorWidget extends StatelessWidget {
   final void Function()? retry;

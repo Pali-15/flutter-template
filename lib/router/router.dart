@@ -15,8 +15,9 @@ class AppRouter {
 
   GoRouter get router => _router;
 
-  AppRouter(RoutesBuilder builder) {
-    _builder = builder;
+  AppRouter(
+    this._builder,
+  ) {
     _router = GoRouter(
       initialLocation: AppRoutes.page1,
       navigatorKey: _rootNavigatorKey,

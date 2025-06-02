@@ -9,7 +9,9 @@ class RouterDiModule extends DiModule {
         RoutesBuilder(),
       )
       ..registerSingleton(
-        AppRouter(getIt.get<RoutesBuilder>()),
+        AppRouter(
+          getIt.get<RoutesBuilder>(),
+        ),
       );
   }
 }

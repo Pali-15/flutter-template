@@ -1,4 +1,4 @@
-import 'package:template/di/crashlytics_cubit_di_module.dart';
+import 'package:template/di/firebase_di_module.dart';
 import 'package:template/di/di_module.dart';
 import 'package:template/di/router_di_module.dart';
 
@@ -21,7 +21,7 @@ sealed class Bootstrap {
   // Dependencies needed at the start of the app
   // Example: Auth, Firebase, ...
   static Future<void> initalizeBaseDependecies() async {
-    List<DiModule> modules = [CrashlyticsCubitDiModule()];
+    List<DiModule> modules = [FirebaseDiModule()];
     for (final module in modules) {
       await module.initialize();
     }

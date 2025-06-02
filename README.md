@@ -61,3 +61,9 @@ The app follows a clean and modular structure using:
 - Wrap every page with the `BasePage` widget.
 - Use `ErrorWidget` to display errors in a consistent manner.
 # flutter-template
+
+### Firebase
+
+- All of the firebase related code are commented
+- After the firebase setup uncomment the related codes from these files
+-  main.dart, 

@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AppDimensions {
+class AppRadius {
   static final radiusXs = Radius.circular(4.r);
   static final radiusS = Radius.circular(8.r);
   static final radiusM = Radius.circular(10.r);

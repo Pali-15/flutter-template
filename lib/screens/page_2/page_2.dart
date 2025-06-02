@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:template/common_widgets/base_screen.dart';
 import 'package:template/design/theme.dart';
-import 'package:template/extensions/context_extension.dart';
+import 'package:template/extensions/context_design_extension.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});

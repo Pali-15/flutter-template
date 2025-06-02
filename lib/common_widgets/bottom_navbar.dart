@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:template/extensions/context_extension.dart';
+import 'package:template/extensions/context_design_extension.dart';
 
 class BottomNavbar extends StatelessWidget {
   final StatefulNavigationShell navigationShell;

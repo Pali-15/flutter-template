@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:template/extensions/context_extension.dart';
+import 'package:template/extensions/context_route_extension.dart';
 import 'package:template/router/router.dart';
 
 extension PumpAppExtension on WidgetTester {
