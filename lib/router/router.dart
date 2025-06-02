@@ -14,14 +14,13 @@ class AppRouter {
 
   late final RoutesBuilder _builder;
   late final GoRouter _router;
+  late final String? _initialLocation;
 
   GoRouter get router => _router;
 
-  AppRouter(
-    this._builder,
-  ) {
+  AppRouter(this._builder, [this._initialLocation]) {
     _router = GoRouter(
-      initialLocation: AppRoutes.page1,
+      initialLocation: _initialLocation ?? AppRoutes.page1,
       navigatorKey: _rootNavigatorKey,
       debugLogDiagnostics: true,
       routes: <RouteBase>[
